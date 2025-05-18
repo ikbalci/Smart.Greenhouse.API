@@ -54,7 +54,7 @@ Bu proje, sera içerisindeki sensörlerden alınan verileri takip etmek ve yöne
    ```
 
 
-## API Uç Noktaları
+## API Endpointleri
 
 API belgelendirmesi ve test için Swagger UI kullanılmıştır. API çalıştırıldığında ana sayfada Swagger UI'a erişebilirsiniz.
 
