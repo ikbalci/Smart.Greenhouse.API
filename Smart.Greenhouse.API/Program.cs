@@ -105,17 +105,16 @@ try
 
     app.MapControllers();
 
-    // Ensure database schema is created
     using (var scope = app.Services.CreateScope())
     {
         try
         {
             var dbContext = scope.ServiceProvider.GetRequiredService<SensorDataContext>();
-            dbContext.Database.EnsureCreated();
+            dbContext.Database.Migrate();
         }
         catch (Exception ex)
         {
-            Log.Error(ex, "An error occurred while ensuring database schema");
+            Log.Error(ex, "An error occurred while migrating database");
         }
     }
 

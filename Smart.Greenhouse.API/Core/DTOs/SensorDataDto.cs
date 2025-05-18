@@ -12,7 +12,8 @@ namespace Smart.Greenhouse.API.Core.DTOs
         
         [Range(-50, 100)]
         public double Temperature { get; set; }
-        
+
+        public double AirQuality {get; set; }
         public bool PumperOn { get; set; }
         public bool HeaterOn { get; set; }
         public bool CoolerOn { get; set; }
