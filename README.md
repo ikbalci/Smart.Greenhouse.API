@@ -63,3 +63,47 @@ API belgelendirmesi ve test için Swagger UI kullanılmıştır. API çalıştı
 - **API**: Controller'lar, middleware ve API ile ilgili diğer bileşenler
 - **Core**: İş mantığı, arayüzler ve varlık modelleri
 - **Infrastructure**: Veritabanı bağlantısı, repository implementasyonları ve diğer altyapı bileşenleri
+
+## Yeni Özellik Ekleme Rehberi
+
+Akıllı Sera Takip Sistemi API'ye yeni özellikler eklemek için izlenmesi gereken adımlar:
+
+### 1. Veri Modelini Güncelleme
+
+Yeni bir sensör verisi veya özellik eklemek için öncelikle `Core/Entities/SensorData.cs` dosyasını güncelleyin:
+
+```csharp
+public class SensorData
+{
+    // Mevcut özellikler...
+    
+    // Yeni özellik ekleme örneği:
+    public bool NewFeatureStatus { get; set; }
+}
+```
+
+### 2. DTO Sınıfını Güncelleme
+
+Veri aktarımı için kullanılan DTO sınıfını da güncelleyin (`Core/DTOs/SensorDataDto.cs`):
+
+```csharp
+public class SensorDataDto
+{
+    // Mevcut özellikler...
+    
+    // Yeni özellik ekleme örneği:
+    public bool NewFeatureStatus { get; set; }
+}
+```
+
+### 3. Migration Oluşturma ve Veritabanını Güncelleme
+
+Entity Framework Core ile migration oluşturup veritabanını güncelleyin:
+
+```bash
+# Migration oluşturma
+dotnet ef migrations add AddNewFeature
+
+# Veritabanını güncelleme
+dotnet ef database update
+```
