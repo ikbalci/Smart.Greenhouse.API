@@ -1,0 +1,57 @@
+## .NET Core için ignore dosyası
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
+
+# Visual Studio dosyaları
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.dbmdl
+*.jfm
+*.pfx
+*.publishsettings
+
+# Derlenmiş çıktılar
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# MSTest test sonuçları
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Paket dosyaları
+**/[Pp]ackages/*
+*.nupkg
+*.snupkg
+
+# Lokal dosyalar
+appsettings.Local.json
+appsettings.Development.json
+appsettings.Production.json
+
+# Diğer özel dosyalar
+node_modules/
+bower_components/
+wwwroot/lib/
+*.min.css
+*.min.js
+*.bak
+*.cache
+*.mdf
+*.ldf
+
+# IDE özel dosyaları
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+.idea/
+*.sln.iml 
