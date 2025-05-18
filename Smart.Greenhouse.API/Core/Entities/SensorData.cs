@@ -15,6 +15,7 @@ namespace Smart.Greenhouse.API.Core.Entities
         public bool PumperOn { get; set; }
         public bool HeaterOn { get; set; }
         public bool CoolerOn { get; set; }
+        public bool AirPurifierOn { get; set; }
         public string? TemperatureCategory { get; set; }
         public string? MoistureCategory { get; set; }
         public double HeatingDemand { get; set; }

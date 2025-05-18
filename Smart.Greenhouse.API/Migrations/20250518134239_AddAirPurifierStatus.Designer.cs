@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Smart.Greenhouse.API.Infrastructure.Data;
 
@@ -11,9 +12,11 @@ using Smart.Greenhouse.API.Infrastructure.Data;
 namespace Smart.Greenhouse.API.Migrations
 {
     [DbContext(typeof(SensorDataContext))]
-    partial class SensorDataContextModelSnapshot : ModelSnapshot
+    [Migration("20250518134239_AddAirPurifierStatus")]
+    partial class AddAirPurifierStatus
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
