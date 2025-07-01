@@ -70,5 +70,10 @@ namespace Smart.Greenhouse.API.Infrastructure.Data.Repositories
         {
             return await _dbSet.AnyAsync(predicate);
         }
+
+        public async Task<int> CountAsync()
+        {
+            return await _dbSet.CountAsync();
+        }
     }
 } 

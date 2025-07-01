@@ -50,5 +50,10 @@ namespace Smart.Greenhouse.API.Core.Interfaces.Repositories
         /// Check if entity exists
         /// </summary>
         Task<bool> ExistsAsync(Expression<Func<T, bool>> predicate);
+        
+        /// <summary>
+        /// Count entities
+        /// </summary>
+        Task<int> CountAsync();
     }
 } 

@@ -24,5 +24,10 @@ namespace Smart.Greenhouse.API.Core.Interfaces.Repositories
         /// Get sensor data from a specific timeframe (daily, weekly, monthly)
         /// </summary>
         Task<IEnumerable<SensorData>> GetByTimeframeAsync(string timeframe);
+
+        /// <summary>
+        /// Deletes all sensor data from the table and resets the identity.
+        /// </summary>
+        Task ClearAllDataAsync();
     }
 } 

@@ -45,7 +45,7 @@ try
         }
     });
 
-    // Configure CORS
+    // TODO: api deploy edildiğinde dashboard frontend url değiştirilecek
     builder.Services.AddCors(options =>
     {
         options.AddPolicy("AllowSpecificOrigin",

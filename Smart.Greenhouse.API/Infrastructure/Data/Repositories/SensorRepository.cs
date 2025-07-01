@@ -57,5 +57,12 @@ namespace Smart.Greenhouse.API.Infrastructure.Data.Repositories
                 .OrderBy(s => s.CreatedAt)
                 .ToListAsync();
         }
+
+        public async Task ClearAllDataAsync()
+        {
+            var tableName = _context.Model.FindEntityType(typeof(SensorData)).GetTableName();
+            await _context.Database.ExecuteSqlRawAsync($"DELETE FROM [{tableName}]");
+            await _context.Database.ExecuteSqlRawAsync($"DBCC CHECKIDENT ('{tableName}', RESEED, 0)");
+        }
     }
 } 
